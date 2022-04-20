@@ -1,5 +1,6 @@
 import React from 'react';
 import Pokecard from './Pokecard';
+import './Pokedex.css'
 
 const pokemons = [
         {id: 4, name: 'Charmander', type: 'fire', base_experience: 62},
@@ -18,13 +19,14 @@ function Pokedex() {
         <div className='Pokedex'>
             <h1>Pokedex</h1>
             <div className='Pokecards'>
-                {pokemons.map(prop => {
+                {pokemons.map(prop => (
                     <Pokecard 
+                        id={prop.id}
                         name={prop.name}
                         type={prop.type}
                         exp={prop.base_experience}
                     />
-                })}
+                ))}
                 
             </div>
         </div>
